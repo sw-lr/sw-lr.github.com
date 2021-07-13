@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨思旺</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript"></script>
+    <style type="text/css">
+        body{
+            background-image: url(http://pic.51yuansu.com/backgd/cover/00/56/56/5cd29df618b5a.jpg!/fw/780/quality/90/unsharp/true/compress/true);
+            background-size:  cover;
+            background-position: center;
+            height: 100vh;
+            /* width: 100%; */
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .content{
+            margin-left: 20%;
+            padding-top: 20%;
+            width: 70%;
+        }
+        .btn{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            height: 100px;
+            width: 100px;
+            background-color: gold;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            background-image: url(http://pic.51yuansu.com/pic3/cover/03/99/36/5f0962fb2b18d_610.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="content">{{joke}}</div>
+        <div class="btn" @click="getJoke">新的笑话哦</div>
+    </div>
+    <script>
+        var app=new Vue({
+            el:'#app',
+            data:{
+                joke:'老婆,以后要是无聊了哦,可以打开这个网站哦,然后点击下面的按钮哦,就有很多好笑的笑话哦'
+            },
+            methods:{
+                getJoke(){
+                    axios.get("https://autumnfish.cn/api/joke").then((result)=>{
+                        this.joke=result.data;
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>
