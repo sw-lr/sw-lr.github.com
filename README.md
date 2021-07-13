@@ -1,2 +1,2 @@
 # sw-lr.github.com
-[![GitHub](https://img.shields.io/badge/dynamic/json?logo=github&label=GitHub&labelColor=495867&color=495867&query=%24.data.totalSubs&url=https%3A%2F%2Fapi.spencerwoo.com%2Fsubstats%2F%3Fsource%3Dgithub%26queryKey%3Dhayschan&style=flat-square)](https://github.com/hayschan)
+[![讲笑话)(https://github.com/sw-lr/hlr/blob/main/%E7%BB%99%E8%80%81%E5%A9%86%E8%AE%B2%E7%AC%91%E8%AF%9D.html)
